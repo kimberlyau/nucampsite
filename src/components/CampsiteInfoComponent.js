@@ -1,5 +1,5 @@
-import React from 'react';
-import { Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import React, { Component } from 'react';
+import { Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 /* 
     Presentational components that do not contain or manage state
@@ -43,6 +43,35 @@ function RenderComments({comments}) {
     return <div />;
 }
 
+class CommentForm extends Component {
+    constructor (props) {
+        super(props);
+        // Default state of modal
+        this.state = {
+            isModalOpen: false
+        }
+
+        this.toggleModal = this.toggleModal.bind(this);
+
+        this.handleSubmit =this.handleSubmit.bind(this);
+    }
+
+    toggleModal () {
+        this.setState({isModalOpen: !this.state.isModalOpen});
+    }
+
+    handleSubmit (values) {
+        
+    }
+
+    render () {
+        return (
+            <Button outline>
+                <i className='fa fa-pencil fa-lg'>Submit Comment</i>
+            </Button>
+        )
+    }
+}
 // this keyword has been refactored out
 function CampsiteInfo(props) {
     if (props.campsite) {
