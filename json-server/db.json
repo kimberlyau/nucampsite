@@ -244,6 +244,16 @@
       "agree": true,
       "contactType": "Email",
       "feedback": "test"
+    },
+    {
+      "firstName": "kim",
+      "lastName": "test",
+      "phoneNum": "2039402349",
+      "email": "abc@test.com",
+      "agree": false,
+      "contactType": "Phone",
+      "feedback": "hello",
+      "id": 1
     }
   ]
 }
